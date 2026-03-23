@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "title": "Lior Bashari | Full-Stack Developer",
+    "description": "Custom websites, applications and systems. Advanced digital solutions for businesses."
+  },
+  "nav": {
+    "services": "Services",
+    "method": "Method",
+    "tech": "Tech",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Turning Ideas Into Working Code",
+    "subtitle": "Full-Stack developer specializing in building advanced digital systems. From specification to launch — everything under one roof.",
+    "cta": "Let's Talk"
+  },
+  "services": {
+    "heading": "Services",
+    "subheading": "Custom solutions for every digital challenge",
+    "custom": {
+      "title": "Custom Development",
+      "description": "Tailor-made websites and applications, built from scratch with cutting-edge technologies."
+    },
+    "systems": {
+      "title": "System Building",
+      "description": "Management systems, dashboards and SaaS platforms from end to end."
+    },
+    "automation": {
+      "title": "Automations",
+      "description": "System integrations, business process automation and saving valuable time."
+    }
+  },
+  "method": {
+    "heading": "The Lior Method",
+    "subheading": "A structured process that guarantees results",
+    "step1": {
+      "title": "Specification",
+      "description": "Understanding needs, mapping requirements and designing precise architecture."
+    },
+    "step2": {
+      "title": "Development",
+      "description": "Clean, organized code with leading technologies and continuous testing."
+    },
+    "step3": {
+      "title": "Deployment",
+      "description": "Going live, close guidance and ongoing technical support."
+    }
+  },
+  "tech": {
+    "heading": "Technologies",
+    "subheading": "The tools behind the scenes"
+  },
+  "contact": {
+    "heading": "Let's Talk",
+    "subheading": "Tell me about your project and I'll get back to you within 24 hours",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company (optional)",
+      "projectType": "Project Type",
+      "budgetRange": "Budget Range",
+      "message": "Tell me about your project",
+      "next": "Next",
+      "back": "Back",
+      "submit": "Submit",
+      "sending": "Sending...",
+      "success": "Form submitted successfully! We'll get back to you soon.",
+      "error": "Error submitting form. Please try again."
+    },
+    "projectTypes": {
+      "website": "Website",
+      "webapp": "Web Application",
+      "automation": "Automation",
+      "consulting": "Consulting",
+      "other": "Other"
+    },
+    "budgetRanges": {
+      "5k-10k": "$5,000 - $10,000",
+      "10k-20k": "$10,000 - $20,000",
+      "20k-50k": "$20,000 - $50,000",
+      "50k+": "$50,000+"
+    },
+    "validation": {
+      "required": "Required field",
+      "invalidEmail": "Invalid email address",
+      "invalidPhone": "Invalid Israeli phone number",
+      "minChars": "Minimum {count} characters",
+      "maxChars": "Maximum {count} characters",
+      "selectProject": "Please select a project type",
+      "selectBudget": "Please select a budget range"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "accessibility": "Accessibility Statement",
+    "builtWith": "Built with ❤️ and code"
+  }
+}
