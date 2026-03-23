@@ -1,60 +1,76 @@
 import { useTranslations } from "next-intl";
-import { Github, Linkedin } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/constants";
 
 export function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="border-t bg-muted/30">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-start">
+    <footer className="relative border-t border-white/5 bg-[#060b18]">
+      {/* Top gradient line */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
+
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+          {/* Brand */}
           <div>
-            <h3 className="text-lg font-bold mb-2">Lior Bashari</h3>
-            <p className="text-sm text-muted-foreground">
-              Full-Stack Developer
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/30">
+                <span className="text-white text-sm font-black">LB</span>
+              </div>
+              <span className="text-white font-bold">Lior Bashari</span>
+            </div>
+            <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
+              Full-Stack Developer המתמחה בבניית מוצרים דיגיטליים מתקדמים.
             </p>
           </div>
 
+          {/* Contact */}
           <div>
-            <p className="text-sm text-muted-foreground mb-3">
-              lior@example.com
-            </p>
-            <div className="flex gap-4 justify-center md:justify-start">
-              <a
-                href={SOCIAL_LINKS.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
+            <h4 className="text-sm font-semibold text-white mb-4">יצירת קשר</h4>
+            <div className="space-y-2">
+              <a href="mailto:lior@example.com" className="flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-400 transition-colors">
+                <Mail className="h-4 w-4" />
+                lior@example.com
               </a>
-              <a
-                href={SOCIAL_LINKS.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Github className="h-5 w-5" />
+              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-400 transition-colors">
+                <Linkedin className="h-4 w-4" />
+                LinkedIn
+              </a>
+              <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-400 transition-colors">
+                <Github className="h-4 w-4" />
+                GitHub
               </a>
             </div>
           </div>
 
-          <div className="text-sm text-muted-foreground">
-            <p>{t("accessibility")}</p>
+          {/* Nav */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">ניווט</h4>
+            <div className="space-y-2">
+              {["services", "method", "tech", "contact"].map((section) => (
+                <a
+                  key={section}
+                  href={`#${section}`}
+                  className="block text-sm text-slate-500 hover:text-indigo-400 transition-colors capitalize"
+                >
+                  {section === "services" ? "שירותים"
+                    : section === "method" ? "השיטה"
+                    : section === "tech" ? "טכנולוגיות"
+                    : "צור קשר"}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
-        <Separator className="my-6" />
-
-        <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-sm text-muted-foreground">
-          <p>
+        {/* Bottom bar */}
+        <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-slate-600">
             © {new Date().getFullYear()} Lior Bashari. {t("rights")}
           </p>
-          <p>{t("builtWith")}</p>
+          <p className="text-xs text-slate-600">{t("builtWith")}</p>
         </div>
       </div>
     </footer>
